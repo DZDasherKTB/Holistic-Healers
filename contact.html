@@ -170,7 +170,7 @@ We provide accurate readings and the most effective healings with ease. Our sevi
                message: form.message.value
             };
 
-            const response = await fetch('https://reiki-website-pied.vercel.app/send', {
+            const response = await fetch('/api/send', {
                method: 'POST',
                headers: { 'Content-Type': 'application/json' },
                body: JSON.stringify(formData)
@@ -179,6 +179,6 @@ We provide accurate readings and the most effective healings with ease. Our sevi
             const result = await response.json();
             alert(result.message);
          });
-      </script>
+      </script>       
    </body>
 </html>
