@@ -122,12 +122,32 @@ button:focus {
 }
 
 ul,
-li,
+li {
+     margin: 0px;
+     padding: 0px;
+     
+  	list-style-position: inside;
+    text-align: left;
+    
+    font-size: 14px;
+    color: #000;
+    margin: 0px;
+}
+
+
 ol {
      margin: 0px;
      padding: 0px;
-     list-style: none;
+     color: #0f0f0f;
+    font-weight: bold;
+  	
+    text-align: left;
+    
+    font-size: 16px;
+    color: #000;
+    margin: 5px;
 }
+
 
 p {
      margin: 20px;
@@ -292,7 +312,7 @@ button {
 }
 .banner_text {
     width: 100%;
-text-align: justify;
+	text-align: justify;
     float: left;
     font-size: 16px;
     color: #000;
@@ -313,7 +333,7 @@ margin-left: 20px;
     float: left;
     font-size: 16px;
     color: #ffffff;
-    background-color: #060707;
+    background-color: #0dcec8;
     text-align: center;
     padding: 10px 0px;
     border-radius: 40px;
@@ -339,10 +359,10 @@ margin-left: 20px;
     float: left;
     font-size: 16px;
     color: #ffffff;
-    background-color: #060707;
+    background-color: #0dcec8;
     text-align: center;
     padding: 10px 0px;
-    border-radius: 50px;
+  /*  border-radius: 50px;*/
 }
 .email_bt a:hover {
     color: #ffffff;
@@ -357,6 +377,251 @@ margin-left: 20px;
 
 
 
+.buy_bt {
+    float: left;
+    width: 100%;
+
+}
+
+.buy_bt {
+    width: 170px;
+    float: center;
+    margin-left: 20px;
+}
+
+.buy_bt a {
+    width: 100%;
+    float: right;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #0dcec8;
+    text-align: center;
+    padding: 10px 0px;
+    border-radius: 40px;
+}
+
+.buy_bt a:hover {
+    background-color: #f5ddb6;
+    color: #ffffff;
+}
+
+.buy_bt .active a {
+    background-color: #f5ddb6;
+    color: #fff;
+}
+
+.price_text {
+    font-size: 16px;
+    color: #fefefd;
+    width: 42%;
+    padding-top: 5px;
+    text-align: right;
+}
+
+
+.product-item .btn-action {
+    position: absolute;
+    width: 100%;
+    bottom: -40px;
+    left: 0;
+    opacity: 0;
+    transition: .5s;
+}
+
+.product-item:hover .btn-action {
+    bottom: -20px;
+    opacity: 1;
+}
+
+.product-carousel .owl-nav {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.product-carousel .owl-nav .owl-prev,
+.product-carousel .owl-nav .owl-next{
+    position: relative;
+    margin: 0 5px;
+    width: 55px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    background: var(--primary);
+    font-size: 22px;
+    transition: .5s;
+}
+
+.product-carousel .owl-nav .owl-prev:hover,
+.product-carousel .owl-nav .owl-next:hover {
+    color: var(--dark);
+}
+
+.bg-offer {
+    background: url(../img/offer.jpg) top right no-repeat;
+    background-size: cover;
+}
+
+.price-carousel::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    left: 0;
+    background: var(--primary);
+    border-radius: 8px 8px 50% 50%;
+    z-index: -1;
+}
+
+.price-carousel .owl-nav {
+    margin-top: 35px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.price-carousel .owl-nav .owl-prev,
+.price-carousel .owl-nav .owl-next{
+    position: relative;
+    margin: 0 5px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    background: #FFFFFF;
+    font-size: 22px;
+    border-radius: 45px;
+    transition: .5s;
+}
+
+.price-carousel .owl-nav .owl-prev:hover,
+.price-carousel .owl-nav .owl-next:hover {
+    color: var(--dark);
+}
+
+.team-carousel .owl-nav {
+    position: absolute;
+    width: 50px;
+    height: 160px;
+    top: calc(50% - 80px);
+    right: 0;
+    z-index: 1;
+}
+
+.team-carousel .owl-nav .owl-prev,
+.team-carousel .owl-nav .owl-next {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    background: var(--primary);
+    font-size: 22px;
+    transition: .5s;
+}
+
+.team-carousel .owl-nav .owl-prev:hover,
+.team-carousel .owl-nav .owl-next:hover {
+    color: var(--dark);
+}
+
+.team-item img {
+    transition: .5s;
+}
+
+.team-item:hover img {
+    transform: scale(1.2);
+}
+
+.team-item .team-overlay {
+    position: absolute;
+    top: 45px;
+    right: 45px;
+    bottom: 45px;
+    left: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(122, 183, 48, .8);
+    transition: .5s;
+    opacity: 0;
+}
+
+.team-item:hover .team-overlay {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+}
+
+
+
+.btn-play {
+    position: relative;
+    display: block;
+    box-sizing: content-box;
+    width: 16px;
+    height: 26px;
+    border-radius: 100%;
+    border: none;
+    outline: none !important;
+    padding: 18px 20px 20px 28px;
+    background: #FFFFFF;
+}
+
+.btn-play:before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: #FFFFFF;
+    border-radius: 100%;
+    animation: pulse-border 1500ms ease-out infinite;
+}
+
+.btn-play:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: #FFFFFF;
+    border-radius: 100%;
+    transition: all 200ms;
+}
+
+.btn-play span {
+    display: block;
+    position: relative;
+    z-index: 3;
+    width: 0;
+    height: 0;
+    left: -1px;
+    border-left: 16px solid var(--primary);
+    border-top: 11px solid transparent;
+    border-bottom: 11px solid transparent;
+}
+
 
 .readmore_bt {
     width: 170px;
@@ -369,7 +634,7 @@ margin-left: 20px;
     float: left;
     font-size: 16px;
     color: #ffffff;
-    background-color: #060707;
+    background-color: #0dcec8;
     text-align: center;
     padding: 10px 0px;
     border-radius: 40px;
@@ -483,6 +748,7 @@ text-align: justify;
 .read_bt {
     width: 170px;
     float: right;
+border-radius: 40px;
     padding-top: 64px;
 }
 .read_bt a {
@@ -490,7 +756,8 @@ text-align: justify;
     float: left;
     font-size: 16px;
     color: #ffffff;
-    background-color: #181818;
+border-radius: 40px;
+    background-color: #0dcec8;
     text-align: center;
     padding: 10px 0px;
     font-family: 'Roboto', sans-serif;
@@ -500,6 +767,18 @@ text-align: justify;
     background-color: #13a25d;
 }
 
+
+.normal {
+    width: 100%;
+    
+    font-size: 14px;
+    color: #0f0f0f;
+    margin: 0px;
+    
+    font-family: 'Roboto', sans-serif;
+}
+
+
 /* about section end */
 
 /* services section start */
@@ -507,7 +786,7 @@ text-align: justify;
 .services_section{
     width: 100%;
     float: left;
-    background-image: url(../images/services-bg.png);
+   background-image: url(../images/services-bg.png);
     background-size: 100%;
     background-repeat: no-repeat;
 }
@@ -549,8 +828,8 @@ text-align: justify;
 
 .icon_6{
     width: 100%;
-    text-align: center;
-padding-left: 30px;
+    text-align: left;
+padding-left: 0px;
 margin-top: 20px;
 }
 
@@ -617,7 +896,7 @@ text-align: justify;
 .events_taital{
     width: 100%;
     float: left;
-    font-size: 40px;
+    font-size: 20px;
     color: #141414;
     text-align: center;
     font-weight: bold;
@@ -679,12 +958,14 @@ text-align: justify;
     width: 170px;
     margin: 0 auto;
     text-align: center;
+border-radius: 40px;
 }
 .seemore_bt a {
     width: 100%;
     float: left;
     font-size: 16px;
     color: #ffffff;
+border-radius: 40px;
     background-color: #181818;
     text-align: center;
     padding: 10px 0px;
@@ -779,6 +1060,7 @@ textarea#comment::placeholder {
   width: 150px;
   float: left;
   margin-top: 40px;
+border-radius: 40px;
 }
 
 .send_bt button {
@@ -792,6 +1074,8 @@ textarea#comment::placeholder {
   font-family: 'Roboto', sans-serif;
   border: none; /* Remove default button border */
   cursor: pointer; /* Pointer cursor */
+border-radius: 40px;
+
 }
 
 .send_bt button:hover {
