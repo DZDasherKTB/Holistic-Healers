@@ -1326,5 +1326,10 @@ text-align: justify;
     color: #13a25d;
 }
 
-
-/* copyright section end */
+@media (max-width: 768px) {
+    .logo img {
+      width: min(70vw, 200px);  /* Makes image bigger but responsive */
+      max-width: none;          /* Override any global max-width */
+      object-fit: contain;      /* Keeps image from distorting */
+    }
+  }
